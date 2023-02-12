@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% set foo = "date_joined()"%}
+
+<div class="myDiv">
+    <img src= "{{ url_for('static', filename='image/unnamed.png' ) }}" alt="" class="center">
+    <h1>Joel Rhoden</h1>
+    <p>@joeyoffxcial</p>
+    <p>Kingston, Jamaica.</p>
+    <!-- <p>Joined January, 2018</p> -->
+    <p>{{ foo }}</p>
+  </div>
+
+<div class="Div2">
+    <p>I am a 20 year old Computer Science major at the University of the West Indies. 
+        I am an aviation enthusiast and have plans to work in the field in the future. My other interests include photography, aviation, and graphic design.</p>
+  </div>
+
+<div class="Div3">
+    <div class="grid-item">
+        <p>25</p>
+    </div>
+    <div class="grid-item">
+        <p>250</p>
+    </div>
+    <div class="grid-item">
+        <p>25765</p>
+    </div> 
+    <div class="grid-item2">
+        <p>POSTS</p>
+    </div> 
+    <div class="grid-item2">
+        <p>FOLLOWING</p>
+    </div>
+    <div class="grid-item2">
+        <p>FOLLOWERS</p>
+    </div>  
+  </div>
+
+<div class="follow">
+    <button class="button" type="button">Follow</button>
+</div>
+ 
+{% endblock %}
