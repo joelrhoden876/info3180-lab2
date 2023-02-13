@@ -21,7 +21,7 @@ def about():
 @app.route('/profile')
 def profile():
     """Render the website's profile page."""
-    return render_template('profile.html')
+    return render_template('profile.html',joined=format_date_joined(2020,11,9))
 
 
 ###
@@ -52,12 +52,9 @@ def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
 
-def format_date_joined():
+def format_date_joined(y,m,d):
     now = datetime.datetime.now() # today's date
-    date_joined = datetime.date(2019, 2, 7) # a specific date
-    ## Format the date to return only month and year date
-    # template = Template("{{ format_date_joined() }}")   
-    # print(template.render(format_date_joined=format_date_joined))
+    date_joined = datetime.date(y,m,d) # a specific date
     return "Joined "  + date_joined.strftime("%B, %Y")
 
 def date_joined():
